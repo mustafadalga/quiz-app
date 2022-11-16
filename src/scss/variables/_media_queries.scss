@@ -1,0 +1,17 @@
+$br_2xs: 320px;
+$br_xs: 480px;
+$br_sm: 640px;
+$br_md: 768px;
+$br_lg: 1024px;
+$br_xl: 1280px;
+$br_2xl: 1440px;
+
+$breakpoints: (
+        "2xs": $br_2xs,
+        "xs": $br_xs,
+        "sm": $br_sm,
+        "md": $br_md,
+        "lg": $br_lg,
+        "xl": $br_xl,
+        "2xl": $br_2xl,
+);

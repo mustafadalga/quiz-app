@@ -29,7 +29,7 @@ watch(() => completedPercent.value, (newValue, oldValue) => {
 <template>
   <div class="progress" :style="`--num:${completedPercent}`">
     <div class="progress-bar" :style="completedPercentStyle"></div>
-    <span class="progress-text" :key="completedPercent" v-counter="counter">{{ completedPercent }}%</span>
+    <span class="progress-text" :key="completedPercent" v-counter="counter">{{ completedPercent }}% complete</span>
   </div>
 </template>
 

@@ -10,15 +10,18 @@ const report = computed(() => store.getters.getActiveQuizResult());
 <template>
   <section class="c-report">
 
-    <div class="title">
+    <h1 class="title">
       You got {{ report.correctAnswersNumber }} out of {{ report.totalQuestionsNumber }} questions right!
+    </h1>
 
-      <h4 v-if="report.hasAllQuizzesSuccessRate">
-        You where better then {{ report.allQuizzesSuccessRate }}% of all quizer!
-      </h4>
-    </div>
+    <h3 class="description" v-if="report.hasAllQuizzesSuccessRate">
+      You where better then {{ report.allQuizzesSuccessRate }}% of all quizer!
+    </h3>
 
     <div class="questions">
+
+      <div class="questions-title">Your answers</div>
+
       <Question v-for="(question,index) in questions"
                 :question="question"
                 :question-number="index"
@@ -39,7 +42,7 @@ const report = computed(() => store.getters.getActiveQuizResult());
 
 .c-report {
   display: grid;
-  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
   max-width: $br_sm;
   width: 100%;
   margin: 0 auto;
@@ -59,11 +62,23 @@ const report = computed(() => store.getters.getActiveQuizResult());
   }
   @include breakpoint("xl") {
     font-size: 24px;
-    line-height: 32px;
   }
 }
 
-.questions{
+.description {
+  margin-top: 15px;
+  color: $colorGray500;
+  text-align: center;
+  font-size: 13px;
+  @include breakpoint("md") {
+    font-size: 15px;
+  }
+  @include breakpoint("xl") {
+    font-size: 16px;
+  }
+}
+
+.questions {
   margin: 60px 0 30px;
   display: grid;
   gap: 30px;
@@ -71,11 +86,30 @@ const report = computed(() => store.getters.getActiveQuizResult());
     gap: 60px;
   }
 }
-:deep(.question){
+
+.questions-title {
+  color: $colorGray500;
+  padding-bottom: 8px;
+  border-bottom: 1px solid $colorGray300;
+  font-size: 20px;
+  @include breakpoint("md") {
+    font-size: 24px;
+  }
+  @include breakpoint("xl") {
+    font-size: 30px;
+  }
+}
+
+.title, .description, .questions-title {
+  text-align: center;
+}
+
+:deep(.question) {
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   padding: 30px;
 }
-.btn-new-quiz{
+
+.btn-new-quiz {
   max-width: $br_2xs;
   margin: 0 auto;
   width: 100%;

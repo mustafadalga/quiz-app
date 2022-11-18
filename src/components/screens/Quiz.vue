@@ -53,7 +53,7 @@ const footerStyle = computed(() => {
 
 .c-quiz {
   display: grid;
-  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.1);
   max-width: $br_sm;
   margin: 0 auto;
   width: 100%;

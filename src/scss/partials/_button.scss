@@ -1,0 +1,26 @@
+@import "@/scss/local/_mixins.scss";
+
+.btn-primary {
+  border: none;
+  outline: 0;
+  background-color: $colorIndigo500;
+  color: $colorWhite;
+  transition: .3s background-color;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 12px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $colorIndigo700;
+  }
+
+  @include breakpoint("md") {
+    font-size: 15px;
+    padding: 12px 24px;
+  }
+  @include breakpoint("2xl") {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+}

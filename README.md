@@ -45,6 +45,10 @@ npm run dev
 ```
 
 
+## License
+[![License](https://img.shields.io/badge/LICENSE-GPL--3.0-orange)](https://github.com/mustafadalga/quiz-app/blob/main/LICENSE)
+
+
 ## Screenshots
 <img width="400" alt="screen-1" src="https://user-images.githubusercontent.com/25087769/202704726-1d6fd06b-fd06-43e6-8ad8-1f7c27832a18.png">
 <br>

@@ -2,7 +2,15 @@
 //@ts-ignore
 import vSelect from "vue-select";
 import "vue-select/dist/vue-select.css";
-import { ref, watch } from "vue";
+import {  ref, watch } from "vue";
+import type { PropType } from "vue";
+
+
+
+interface ISelectedItem {
+  name?: string,
+  id?: string | number
+}
 
 const props = defineProps({
   options: {
@@ -10,7 +18,7 @@ const props = defineProps({
     default: () => []
   },
   selectedOption: {
-    type: Object,
+    type: Object as PropType<ISelectedItem>,
     default: () => ({})
   },
   placeholder: {
@@ -23,7 +31,7 @@ const props = defineProps({
   }
 });
 
-const selectedItem = ref({});
+const selectedItem = ref<ISelectedItem>();
 const watchOptions = {
   immediate: true,
 }
@@ -36,7 +44,7 @@ watch(() => props.selectedOption, (newValue) => selectedItem.value = newValue, w
             :clearable="props.clearable"
             :placeholder="props.placeholder"
             label="name"
-            :modelValue="selectedItem.name"
+            :modelValue="selectedItem?.name"
             @update:modelValue="$emit('selected',$event ? $event : {})"/>
 </template>
 

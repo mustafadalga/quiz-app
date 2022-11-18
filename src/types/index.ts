@@ -32,7 +32,7 @@ interface IState {
     categories: [],
     numberOfQuestions: number,
     activeQuestionNumber: number,
-    isQuizEnded: boolean | null,
+    isQuizEnded: boolean,
     activeComponent: string,
     apiLoadState: {
         [key: string]: IApiLoadState

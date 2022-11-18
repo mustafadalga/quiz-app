@@ -20,7 +20,7 @@ const store = ({
         categories: [],
         numberOfQuestions: 10,
         activeQuestionNumber: 0,
-        isQuizEnded: null,
+        isQuizEnded: false,
         activeComponent: ScreenComponents.Options,
         apiLoadState: {
             categories: {

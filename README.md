@@ -36,6 +36,7 @@
 * All quiz results are also stored in localStorage.
 * For the first quiz there is no comparison. Because there is no previous quiz data.
 * At least two quizzes are required for comparison.
+* The number of questions is 10.
 
 ## Project Setup
 

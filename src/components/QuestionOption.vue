@@ -37,8 +37,8 @@ function handleOption() {
   border: 1px solid $colorGray300;
   cursor: pointer;
   transition: .1s background-color, .1s transform;
-  font-size: 12px;
-  line-height: 26px;
+  font-size: 10px;
+  line-height: 16px;
 
   &:not(:disabled):hover {
     background-color: $colorGray200;
@@ -49,13 +49,11 @@ function handleOption() {
   }
 
   @include breakpoint("md"){
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 12px;
   }
   @include breakpoint("lg") {
     padding: 15px;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 13px;
   }
 }
 </style>

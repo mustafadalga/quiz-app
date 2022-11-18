@@ -22,17 +22,17 @@ function questionOptionClass(option: string): string {
   const userAnswer = store.getters.getUserAnswers(props.questionNumber);
   if (props.showAnswer) {
     if (option == userAnswer && userAnswer == props.question.correct_answer) {
-      return "bg-green-300";
+      return "bg-green-300 text-green-700";
     } else if (option == userAnswer) {
-      return "bg-red-300"
+      return "bg-red-300 text-red-600"
     }
-    return "bg-white";
+    return "bg-white text-black";
   }
 
   if (option == store.getters.getUserAnswers(props.questionNumber)) {
-    return "bg-gray-200"
+    return "bg-gray-200 text-black"
   }
-  return "bg-white"
+  return "bg-white text-black"
 }
 </script>
 
@@ -54,15 +54,15 @@ function questionOptionClass(option: string): string {
 
 .question {
   &__text {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 13px;
+    line-height: 20px;
     text-align: center;
     @include breakpoint("md") {
-      font-size: 18px;
-      line-height: 28px;
+      font-size: 14px;
     }
     @include breakpoint("lg") {
-      font-size: 20px;
+      font-size: 15px;
+      line-height: 24px;
     }
   }
 

@@ -1,0 +1,15 @@
+@import "@/scss/variables/_colors.scss";
+
+$colors: (
+        "red-300":$colorRed300,
+        "red-400":$colorRed400,
+        "green-300":$colorGreen300,
+        "gray-200":$colorGray200,
+        "white":$colorWhite
+);
+
+@each $key, $value in $colors {
+  .bg-#{$key} {
+    background-color: $value;
+  }
+}
